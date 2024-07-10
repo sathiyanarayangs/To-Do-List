@@ -1,38 +1,198 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  color: rgb(255, 44, 79);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.AddListPart {
+  margin-block: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.FormDisplay {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Form {
+  width: 40%;
+}
+
+input,
+textarea {
+  display: block;
+  margin-block: 15px;
+  padding: 25px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid rgb(255, 89, 117);
+  outline: none;
+}
+
+.AddTaskButton {
+  margin: 15px;
+  padding: 20px 50px 20px 50px;
+  background-color: rgb(255, 89, 117);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.AddTaskButtonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.TwoDiv {
+  background: linear-gradient(0, rgb(252, 209, 216) 58%, transparent 100%);
+  display: flex;
+  justify-content: space-around;
+  padding-block: 50px;
+}
+
+.ToDoPart {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.CompletedPart {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.EachTaskPart1,
+.EachTaskPart2 {
+  margin-block: 25px;
+  padding: 5px 10px 5px 25px;
+  width: 85%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.EachTaskPart1:hover,
+.EachTaskPart2:hover {
+  box-shadow: 0 12px 16px rgb(255, 136, 156);
+  will-change: transform;
+  transform: perspective(1000px) rotateX(4.8deg) rotateY(10.23deg)
+    scale3d(1.05, 1.05, 1.05);
+  transition: ease 0.5s;
+}
+
+.EachTaskPart1 {
+  cursor: move;
+}
+
+.complete-btn,
+.delete-btn {
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.complete-btn {
+  background-color: rgb(175, 255, 255);
+}
+
+.delete-btn {
+  background-color: rgb(255, 159, 175);
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.TaskPart {
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.TaskDetails {
+  width: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.TaskDetails h2,
+.TaskDetails p {
+  word-wrap: break-word;
+}
+
+.Footer {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: rgb(255, 44, 79);
+  font-weight: bold;
+  margin: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .TwoDiv {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .AddListPart {
+    width: 100%;
+  }
+
+  .FormDisplay {
+    width: 100%;
+  }
+
+  .Form {
+    width: 80%;
+  }
+
+  input,
+  textarea {
+    padding: 20px;
+  }
+
+  .ToDoPart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .CompletedPart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .TaskPart {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
