@@ -170,7 +170,6 @@ function App() {
       )}
       <div className="Footer">
         <p>Developed by G S Sathiyanarayan</p>
-        <p>Vish Gyana Technology Solutions</p>
       </div>
     </div>
   );
